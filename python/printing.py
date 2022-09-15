@@ -11,6 +11,8 @@ test_vari10 = "CQ"
 test_vari11 = 37
 test_vari12 = 8
 
+test_vari4 = "Uganda"
+
 print(test_vari1)
 print(test_vari2)
 print(test_vari3)
@@ -23,7 +25,7 @@ print(test_vari9)
 print(test_vari10)
 print(test_vari11)
 print("my name is",test_vari3)
-print("I come from",test_vari5,"and iam",age)
-print(f"iam proffesionally a [test_vari6] and iam now living in [test_vari4]")
-print(f"iam now a [test_vari7] and my school is [test_vari10] iam learning [test_vari8]")
-print(f"we learn [test_vari9] and the whole course will take []")
+print("I come from",test_vari5,"and iam",test_vari11)
+print(f"i am proffesionally a {test_vari6} and iam now living in {test_vari4}")
+print(f"iam now a {test_vari7} and my school is {test_vari10} iam learning {test_vari8}")
+print(f"we learn {test_vari9} and the whole course will take {test_vari12}")

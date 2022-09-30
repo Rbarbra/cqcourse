@@ -1,0 +1,11 @@
+Ls2 = list(range(5,20))
+print(Ls2)
+
+print(Ls2[0:3])
+print(Ls2[3::])
+print(Ls2[::3])
+print(Ls2[:3])
+print(Ls2[-3::])
+print(Ls2[::-3])
+print(Ls2[:-3])
+print(Ls2[::-1])

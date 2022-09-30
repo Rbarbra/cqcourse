@@ -1,0 +1,10 @@
+number_input1 = input()
+number_input2 = input("Please give me a Number: ")
+hello = input("Type in something: ")
+world = input("Type something else: ")
+
+print(int(number_input1))
+print(int(float(number_input2)))
+print(hello)
+print(world)
+print(hello,world)

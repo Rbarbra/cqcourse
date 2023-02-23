@@ -1,0 +1,18 @@
+<structural_proteins>
+  <immunglobulins>
+    <immunglobulin_IgA>
+      <isoelectric_point unit="pI">5.0</isoelectric_point>
+      <structure>secondary</structure>
+      <alpha_strand_position>4</alpha_strand_position>
+      <beta_strand_position>5</beta_strand_position>
+      <molecular_weight unit="grams_per_mol">162</molecular_weight>
+      <sequence>hhS224p</sequence>
+      <synonyms>
+        <synonym_1>immune_gramma_globulin</synonym_1>
+        <synonym_2>ig</synonym_2>
+        <synonym_3>immune_serum_globulin</synonym_3>
+        <synonym_4>immune_globulin</synonym_4>
+          </synonyms>
+  </immunglobulin_IgA>
+  </immunglobulins>
+  </structural_proteins>

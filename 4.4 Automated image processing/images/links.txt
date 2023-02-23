@@ -1,0 +1,274 @@
+
+############################################## THINGS THAT WE SHOULD KNOW ###############################################################
+
+Anaconda Einleitung und installation > Öffne Dokumentation von Anaconda Hauptseite
+Kurze Einleitung für Jupiter Notebook und Spider > Create new project !
+Was ist ein Objekt (kurze Einleitung in Objekt Orientierung und wie es funktioniert (aufruf...))
+Was ist ein Density Plot (evtl. zeigen und statistics Package von Python installieren)
+Matplotlib.pyplot kurze Einleitung (inkl. mehrere Bilder nebeneinander zeigen)
+Numpy Einleitung (ca. 1 Tag)
+Was ist ein Modul und ein Untermodul?
+Modul random kurze Einleitung
+Was ist ein Bild? Schwarz/Weiss <-> Farbig (RGB)
+	Wie werden Bilder dargestellt > 2D - 3D
+Make a self made image and play with it (cropping, painting, filtering, segmenting, etc..)
+Pakete für Bildverarbeitung > Pillow, Scikit-image, ... evtl. nur Scikit-image
+Denoise a noisy image then make the Segmentation (Denoising ist very important before the Segmentation)
+Thresholds > Otsu/Multiotsu usw..
+Zellen Zählen Beispiel ... das Watershed usw... in Scikit-image > sehr wichtig > https://scikit-image.org/docs/dev/auto_examples/applications/plot_human_mitosis.html
+Wound healing assay / Scratch assay analysis ... Entropy Filter usw... in Scikit-image
+
+
+################################################# DigitalSreeni Github #########################################################################
+
+https://github.com/bnsreenu/python_for_microscopists > python_for_microscopists
+
+
+################################################ THINGS TO DO SEPERATELY ##################################################################
+
+Object Oriented Programming in Python
+Modules and submodules in Python
+Numpy Introduction
+	make some pictures
+	how to make a numpy array
+Matplotlib.plot > very brief introduction
+	How to plot a Histogram
+Matplotlib.pyplot
+	plotting images, saving images, 
+RGB_TO_GRAY
+Rescaling
+Resizing
+Cropping
+Masking
+Labeling
+Filtering/Denoising
+Segmenting
+
+# last scripts
+	Counting cells
+	Scratch assay ?
+	Object Detection by Template Matching
+	Mitosis
+	
+
+################################################### INTERESSTING THINGS TO KNOW ###########################################################
+
+Digitize > used in Multi-otsu to make a new picture using the thresholds
+	its like making a new array with zeros and filling it.
+	regions = np.digitize(img, bins = thresholds)
+
+flat > to flatten an array from 2D to 1D to plot a histogram. eg. img.flat
+	this is a Generator like range
+
+ravel() > to flatten an array from 2D to 1D, but its not a generator
+	eg. img.ravel()
+
+
+################################################ THINGS TO COVER: IMPORTANT ###############################################################
+
+https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_rgb_to_gray.html > RGB to grayscale: How to convert a colored image to gray
+
+https://scikit-image.org/docs/dev/auto_examples/color_exposure/plot_equalize.html > Histogram Equalization: How to extend a histogram to find a threshold
+
+https://scikit-image.org/docs/stable/auto_examples/segmentation/plot_multiotsu.html?highlight=multi%20otsu > Multi-Otsu Thresholding: Very useful
+
+https://scikit-image.org/docs/0.11.x/auto_examples/plot_nonlocal_means.html > Non-local means denoising for preserving textures: Good Filter
+https://scikit-image.org/docs/0.12.x/auto_examples/xx_applications/plot_rank_filters.html > Media Filter/Rank filters: Good Filter > see this website for more filters
+
+https://scikit-image.org/docs/dev/auto_examples/filters/plot_entropy.html > Entropy Filter: When there is change in texture and not in color
+
+https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding.html > Try all Thresholds: very coll to see which thresholding option is better
+
+
+############################################## RHEINFOLGE #################################################################################
+
+- Try to make an array with np.asarray([]) or np.array([]) or define a list at first and np.array(list)
+
+- Try to make an image
+
+- use io from skimage or plt from matplotlib.pyplot to show the image
+	io.imshow(img)
+	plt.imshow(img, cmap = 'gray')
+
+- Cropping an image
+
+- How to zoom in to the image
+
+- Change the image to float (0 - 1)
+
+- Change the image to binary (masking) # use io from skimage to plot a binary image (T/F image)
+
+- Download Folder from https://github.com/bnsreenu/python_for_microscopists > python_for_microscopists
+
+- Converting a image to grayscale ?
+
+- Filtering/denoising > Which filter? (non local mean, median, gaussian, entropy)
+	make a small image and use the filter to see how the filter works
+
+- Segemtation: Unsing Degmentation mehtods like Otsu/Multiotsu or Using Histogram and manual segmentation
+
+- All thresholds to see which thresholding method is better
+
+- Multi_Otsu
+
+- Make new picture from the thresholds > making an empty array then filling it
+
+
+####################### NOAA Satellite Images ###########################################
+
+https://www.noaa.gov/satellites
+
+https://www.ngdc.noaa.gov/eog/nighttime_lights_loops.html
+
+https://www.ngdc.noaa.gov/eog/data/web_data/pgulf_movies/annual/Persian_Gulf_movie.html > Lights in the persian Golf (video)
+
+
+####################### NUMPY ##############################################
+
+https://scikit-image.org/docs/stable/user_guide/numpy_images.html > A crash course on NumPy for images
+
+https://numpy.org/devdocs/user/quickstart.html > NumPy quickstart
+
+https://numpy.org/devdocs/user/basics.html > NumPy fundamentals
+
+https://numpy.org/devdocs/user/absolute_beginners.html > the absolute basics for beginners 
+
+https://www.youtube.com/watch?v=GB9ByFAIAH4 > Numpy Youtube Video > 1 hour 
+
+https://www.youtube.com/watch?v=NVTWjd_UpzM&list=PLzgPDYo_3xukqLLjNeuCxj4CwvkJin03Z&index=1 > Numpy and Scipy VideoSeries
+
+
+######################################SCIKIT IMAGE################################################
+
+https://github.com/scikit-image/scikit-image > Github 
+
+https://scikit-image.org/ > Scikit-image main Page
+
+https://scikit-image.org/docs/stable/api/skimage.filters.html?highlight=filters#module-skimage.filters > Scikit-image Filters
+
+https://scikit-image.org/docs/stable/auto_examples/applications/plot_rank_filters.html#sphx-glr-auto-examples-applications-plot-rank-filters-py > Rank filters
+
+https://scikit-image.org/docs/stable/user_guide/data_types.html > Image data types and what they mean
+
+https://scikit-image.org/docs/dev/auto_examples/applications/plot_human_mitosis.html#sphx-glr-auto-examples-applications-plot-human-mitosis-py > Segment human cells (in mitosis)
+
+
+#################################### MATPLOTLIB ##########################################################
+
+https://matplotlib.org/stable/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py > Pyplot tutorial
+
+https://matplotlib.org/stable/tutorials/introductory/images.html#sphx-glr-tutorials-introductory-images-py > Image tutorial
+
+https://matplotlib.org/stable/tutorials/colors/colormaps.html > Choosing Colormaps in Matplotlib
+
+https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot > matplotlib.pyplot.plot
+
+https://matplotlib.org/stable/tutorials/introductory/sample_plots.html#sphx-glr-tutorials-introductory-sample-plots-py > Sample plots in Matplotlib
+
+https://www.youtube.com/watch?v=UO98lJQ3QGI&list=RDCMUCCezIgC97PvUuR4_gbFUs5g&start_radio=1&rv=UO98lJQ3QGI&t=3 > Super Youtube Series: Matplotlib
+
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Matplotlib/01-Introduction > Github : Corey Schafer : YouTube
+
+
+####################################### PYTHON TUTORIALS ##################################################
+
+https://docs.python.org/3/tutorial/index.html > The Python Tutorial
+
+https://www.w3schools.com/python/default.asp > w3schools
+
+
+############################################# Github > python_for_microscopists / You Tube ############################################
+
+https://github.com/bnsreenu/python_for_microscopists > python_for_microscopists >>> Most pictures are from here
+
+https://www.youtube.com/channel/UC34rW-HtPJulxr5wp2Xa04w?sub_confirmation=1 > YouTubeSeries: Understanding digital images for Python processing
+
+https://www.youtube.com/watch?v=jcUx-TQpcM8&list=PLZsOBAyNTZwYx-7GylDo3LSYpSompzsqW&index=6 > sehr gut gemacht: Scratch assay analysis with just 5 lines code in Python
+
+
+########################################### ANACONDA ######################################################################
+
+https://docs.anaconda.com/anaconda/navigator/ > https://docs.anaconda.com/anaconda/navigator/
+
+https://www.youtube.com/watch?v=23aQdrS58e0 > Super YouTube Erklärung für Anaconda
+
+https://docs.anaconda.com/anaconda/install/ > Information zur Installation
+
+
+########################################## OBJEKT ORIENTIERUNG ###############################################################
+
+https://realpython.com/python3-object-oriented-programming/ > Object-Oriented Programming (OOP) in Python 3
+
+https://www.tutorialspoint.com/python3/python_classes_objects.htm > Python 3 - Object Oriented
+
+
+########################################################### MODULASIERUNG ###################################
+
+https://www.python-kurs.eu/python3_modularisierung.php > Modularisierung
+
+
+########################################################### Papers ####################################################################
+
+http://smile.ee.ncku.edu.tw/old/Links/MTable/ResearchPaper/papers/2001/A%20fast%20algorithm%20for%20multilevel%20%20thresholding.pdf > A Fast Algorithm for Multilevel Thresholding / Multi Otsu
+
+https://pubmed.ncbi.nlm.nih.gov/25482647/ > An introduction to the wound healing assay using live-cell microscopy
+
+
+###################################################### WHAT IS WATERSHED #########################################################
+
+https://thewatershedproject.org/what-is-a-watershed/ > What is a Watershed?
+
+https://people.cmm.minesparis.psl.eu/users/beucher/wtshed.html > IMAGE SEGMENTATION AND MATHEMATICAL MORPHOLOGY
+
+https://thewatershedproject.org/wp-content/uploads/2017/02/watershed_schematic.jpg > Watershed Picture
+
+https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_watershed.html#sphx-glr-auto-examples-segmentation-plot-watershed-py > Watershed segmentation
+
+
+############################################### OPEN CV######################################
+
+https://docs.opencv.org/4.5.2/d7/dbd/group__imgproc.html > OPen source Computer Vision
+
+https://docs.opencv.org/master/d7/da8/tutorial_table_of_content_imgproc.html > Image Processing (imgproc module)
+
+https://docs.opencv.org/master/d4/d1b/tutorial_histogram_equalization.html > Histogram Equalization
+
+https://docs.opencv.org/3.4/d4/dc6/tutorial_py_template_matching.html > Template matching
+
+
+############################################# PANDAS ################################################################
+
+https://pandas.pydata.org/pandas-docs/stable/getting_started/index.html#getting-started > Getting Started Pandas
+
+https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html > 10 Minutes to Pandas
+
+https://pandas.pydata.org/docs/user_guide/visualization.html > Visualization
+
+https://www.youtube.com/watch?v=eMOA1pPVUc4 > Video ca. 1.5 Stunden. Beispiel
+
+
+####################################### SCIPY LECTURES##############################################################################
+
+https://scipy-lectures.org/advanced/image_processing/
+
+https://scipy-lectures.org/advanced/image_processing/auto_examples/plot_watershed_segmentation.html#sphx-glr-advanced-image-processing-auto-examples-plot-watershed-segmentation-py
+
+https://scipy-lectures.org/packages/scikit-image/index.html#examples-for-the-scikit-image-chapter > Scikit-image: image processing
+
+https://scipy-lectures.org/advanced/image_processing/ > Image manipulation and processing using Numpy and Scipy
+
+https://scipy-lectures.org/index.html > Scipy Lecture Notes
+
+https://scipy-lectures.org/packages/scikit-image/index.html > Scikit-image: image processing
+
+https://scipy-lectures.org/intro/matplotlib/index.html > Matplotlib: plotting
+
+
+############################# PILLOW #####################################################
+
+https://pillow.readthedocs.io/en/stable/handbook/index.html > Pillow Handbook
+
+
+############################# Object Detection by Template Matching #####################################################
+
+https://www.youtube.com/watch?v=P5FTEryiTl4&ab_channel=DigitalSreeni

@@ -1,0 +1,132 @@
+-- >CREATE TABLE boxes(ID int NOT NULL, Boxtpye varchar(255), Subtype char(255), Manufacturer varchar(255));
+-- >ALTER TABLE boxes ADD PRIMARY KEY (ID,Boxtpye);
+-- >ALTER TABLE Professor ADD PRIMARY KEY (ID);
+-- >SHOW columns FROM Professor;
+-- >ALTER TABLE Professor MODIFY ID int NOT NULL AUTO_INCREMENT;
+-- >SHOW columns FROM Professor;
+-- >SHOW columns FROM Student;
+-- >SHOW columns FROM decks2; 
+-- >ALTER TABLE decks2 ADD PRIMARY KEY (ID);
+-- >SHOW columns FROM decks2;
+-- >ALTER TABLE decks2 MODIFY ID int NOT NULL AUTO_INCREMENT;
+-- >ALTER TABLE decks2 ADD Basics int;
+ -- >DROP TABLE if exists decks2;
+-- >CREATE TABLE decks2 (ID int NOT NULL, Short varchar(255) NOT NULL, Colors varchar(225), Fullname varchar(255),Turn int, Price float, Box_ID int NOT NULL, PRIMARY KEY(ID),FOREIGN KEY(Box_ID) REFERENCES boxes(ID));
+-- >SHOW Columns FROM decks2;
+-- >SHOW Columns FROM Professor;
+-- >DROP TABLE if exists Professor;
+-- >CREATE TABLE Professor(ID int NOT NULL,FirstName varchar(255), LastName varchar(255), Gender varchar(225), Nationality varchar(255), Flat_ID int NOT NULL, Housenumber int, PRIMARY KEY(ID));
+-- >SHOW Columns FROM Professor;
+-- >DROP TABLE  if exists staple;
+-- >REATE TABLE staple (ID int NOT NULL, Name varchar(225), Cardtype varchar(225), Color varchar(6), Price float, PRIMARY KEY(ID));
+-- >SHOW columns FROM staple;
+-- >SHOW columns  FROM boxes;
+-- >SHOW Columns FROM decks2; 
+-- >ALTER TABLE decks2 ADD CHECK (Colors in ("blue", "brown","red","pink", "white", "black", "orange", "purple"));
+-- >SELECT * FROM decks2;
+-- >INSERT INTO boxes VALUES (1,"SR","blue","Maryrose",2,100.2 ,3);
+-- >SELECT Short, Colors FROM decks2;
+-- >SELECT DISTINCT Colors FROM decks2;
+-- >SELECT * FROM decks2;
+-- >INSERT INTO decks2 VALUES (2,"MP","orange","Mulungipeace",4,400.2 ,4);
+-- >ALTER TABLE Professor MODIFY Housenumber int DEFAULT "1001";
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (1,"Sam", "Mulungi", "Male","Ugandan", 10, 21);
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (2,"Edward", "Rinner", "Male","German", 11, 22);
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (3,"Christian", "Rinner", "Male","German", 12, 22);
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (4,"Richard", "Taylor", "Male","British", 13, 23);
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (5,"Kiplotik", "Teye", "Male","Kenya", 14, 24);
+-- >SELECT *FROM Professor;
+-- >INSERT INTO Professor VALUES (11,"Grace", "Schmitt", "Female","Kenya", 20, 30);
+-- >SELECT *FROM Professor;
+ -- >INSERT INTO Professor VALUES (6,"Barbra", "Kademe", "Female","India", 15, 25);
+-- >SELECT * FROM Professor;
+-- >INSERT INTO Professor VALUES (7,"Barbra", "Licht", "Female","German", 16, 26);
+-- >SELECT * FROM Professor;
+-- >INSERT INTO Professor VALUES (8,"Sofia", "Aktanov", "Female","French", 17, 27);
+-- >SELECT * FROM Professor;
+-- >INSERT INTO Professor VALUES (9,"Maria", "Klesch", "Female","German", 18, 28);
+-- >SELECT * FROM Professor;
+-- >INSERT INTO Professor VALUES (10,"Mary", "Pears", "Female","German", 19, 29);
+-- >SHOW Columns FROM Professor;
+-- >SELECT * FROM Professor;
+-- >SHOW Columns FROM Student;
+-- >DROP TABLE if exists Student;
+-- >CREATE TABLE Student(ID int NOT NULL,FirstName varchar(255), LastName varchar(255), Gender varchar(225), Nationality varchar(255), Flat_ID int NOT NULL, Housenumber int, PRIMARY KEY(ID));
+-- >SHOW Columns FROM Student;
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (1,"Sam", "Mukasa", "Male","Ugandan", 40, 50);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (2,"John", "Evans", "Male","British", 41, 51);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (3,"Patrik", "Menscher", "Male","German", 42, 52);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (4,"Peter", "Mark", "Male","USA", 43, NULL);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (5,"Samuel", "Peyiye", "Male","Brazil", 40, NULL);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (6,"Lucy", "kipplet", "Female","Kenya", 44, NULL);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (7,"Hope", "Smith", "Female","USA", 45, 53);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (9,"Jude", "Smith", "Female","USA", 47, 58);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (10,"Klarissa", "Wolf", "Female","German", 49, 59);
+-- >SELECT * FROM Student;
+-- >INSERT INTO Student VALUES (11,"Mable", "Atemo", "Female","Uganda", 50, 60);
+-- >SELECT MIN(Housenumber) From Student;
+-- >SELECT MAX(Housenumber) From Student;
+-- >SELECT MIN(Housenumber) From Professor;
+-- >SELECT MAX(Housenumber) From Professor;
+-- >SELECT MIN(Firstname) From Student;
+-- >SELECT COUNT(Housenumber) FROM Student;
+-- >SELECT SUM(Housenumber) From Student;
+-- >SELECT AVG(Housenumber) From Student;
+-- >SELECT SUM(Housenumber) From Student WHERE Housenumber>=45;
+-- >SELECT COUNT(Housenumber) From Professor;
+-- >SELECT AVG(Housenumber) From Professor;
+-- >SELECT COUNT(Housenumber) From Professor;
+-- >SELECT SUM(Housenumber) From Professor;
+-- >SELECT SUM(Housenumber) From Professor WHERE Housenumber>=10;
+-- >SELECT * FROM Student WHERE FirstName LIKE "B%";
+-- >SELECT * FROM Student;
+-- >SELECT * FROM Student WHERE FirstName LIKE "S%";
+-- >SELECT * FROM Student WHERE FirstName LIKE "M%";
+-- >SELECT * FROM Student WHERE Gender LIKE "Female%";
+-- >SELECT * FROM Student WHERE Nationality LIKE "Ugandan%";
+-- >SELECT * FROM Student WHERE Nationality IN ("Ugandan","British","kenya");
+-- >SELECT * FROM Student WHERE Nationality NOT IN ("Ugandan","British","kenya");
+-- >SELECT * FROM Student WHERE ID IN
+-- >(SELECT ID FROM Student WHERE ID IN (6,7,3));
+-- >SELECT * FROM Student WHERE ID BETWEEN 2 AND 7;
+-- >SELECT * FROM Student WHERE ID NOT BETWEEN 6 AND 8;
+-- >SELECT * FROM Student;
+-- >SELECT * FROM Student WHERE FirstName
+-- >BETWEEN "John" AND "Hope" ORDER BY FirstName;
+-- >SELECT ID, LastName from Student;
+-- >SELECT LastName AS Last, Gender AS "SEX" FROM Student;
+-- >SELECT S.ID, S.LastName, S.Nationality FROM Student AS S,ID as I
+-- >WHERE S.LastName="Smith" AND S.ID=I.ID;
+-- >SELECT COUNT(ID), Nationality FROM Student GROUP BY Nationality;
+-- >SELECT COUNT(ID), Nationality FROM Student GROUP BY Nationality ORDER BY COUNT(ID) DESC;
+-- >SELECT COUNT(ID), Nationality FROM Student GROUP BY Nationality HAVING COUNT(ID) > 1;
+-- >SELECT COUNT(ID), Nationality FROM Student GROUP BY Nationality
+ -- >HAVING COUNT(ID) < 3 ORDER BY COUNT(ID) ASC;
+ -- >SELECT AVG(ID), Nationality FROM Student GROUP BY Nationality
+ -- >HAVING AVG(ID) > 3 ORDER BY AVG(ID) ASC;
+-- > SELECT MAX(ID), Nationality FROM Student GROUP BY Nationality
+ -- >HAVING MAX(ID) > 0 ORDER BY MAX(ID) ASC;
+ -- > SELECT FirstName, LastName,
+ -- > CASE
+ -- >     WHEN Nationality = "German" THEN "Germany Citizen"
+-- >	  ELSE "Not German" 
+-- >  END  AS Citizenship
+-- >  FROM Student
+-- >CREATE TABLE Student2 AS SELECT * FROM Student;
+-- >SELECT * FROM Student2;
+CREATE VIEW Student AS SELECT FirstName, LastName, Nationality Flat_ID, Housenumber, Nationality FROM Student WHERE Nationality="German";
+ 

@@ -1,0 +1,2 @@
+-- >CREATE VIEW StudentV AS SELECT FirstName, LastName, Flat_ID, Housenumber, Nationality FROM Student WHERE Nationality="German";
+-- > CREATE VIEW ProfessorV AS SELECT FirstName, LastName, Flat_ID, Housenumber, Nationality FROM Professor WHERE Nationality="German";

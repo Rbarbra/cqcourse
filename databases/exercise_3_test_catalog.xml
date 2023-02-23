@@ -1,0 +1,35 @@
+<Experiments>
+<Molecular_exp>
+    <Title>Gene_extraction</Title>
+    <Duration Time="Hours">6</Duration>
+    <Technician>
+     <Name>Barbra</Name>
+    </Technician>
+    <Tools>
+      <Sample>Tissue</Sample>
+      <Method>Qiagen_extraction</Method>
+    </Tools>
+    <Safe_Date>
+      <Day>10</Day>
+      <Month>October</Month>
+      <Year>2022</Year>
+    </Safe_Date>
+</Molecular_exp>
+<Molecular_exp>
+  <Title>PCR</Title>
+  <Duration Time="Hours">3</Duration>
+  <Technician>
+   <Name>Barbra</Name>
+  </Technician>
+  <Tools>
+    <Sample>DNA</Sample>
+    <Method>Qiagen_DNA_Amplification</Method>
+  </Tools>
+  <Safe_Date>
+    <Day>12</Day>
+    <Month>October</Month>
+    <Year>2022</Year>
+  </Safe_Date>
+
+</Molecular_exp>
+</Experiments>

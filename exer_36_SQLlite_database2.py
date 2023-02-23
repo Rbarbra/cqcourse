@@ -1,0 +1,23 @@
+import sqlite3
+db = sqlite3.connect("mydatabase.db")
+cur = db.cursor()
+cur.execute('DROP TABLE IF EXISTS Professor')
+cur.execute('''CREATE TABLE Professor (ID int NOT NULL PRIMARY KEY, FirstName varchar(255), LastName varchar(255), Gender varchar(225), Nationality varchar(255), Flat_ID int NOT NULL, Housenumber int)''')
+cur.execute("""INSERT INTO Professor VALUES (1,"Sam", "Mulungi", "Male","Ugandan", 10, 21)""")
+cur.execute("""INSERT INTO Professor VALUES (2,"Edward", "Rinner", "Male","German", 11, 22)""")
+cur.execute("""INSERT INTO Professor VALUES (3,"Christian", "Rinner", "Male","German", 12, 22)""")
+cur.execute("""INSERT INTO Professor VALUES (4,"Richard", "Taylor", "Male","British", 13, 23)""")
+cur.execute("""INSERT INTO Professor VALUES (5,"Kiplotik", "Teye", "Male","Kenya", 14, 24)""")
+cur.execute("""INSERT INTO Professor VALUES (11,"Grace", "Schmitt", "Female","Kenya", 20, 30)""")
+cur.execute("""INSERT INTO Professor VALUES (6,"Barbra", "Kademe", "Female","India", 15, 25)""")
+cur.execute("""INSERT INTO Professor VALUES (7,"Barbra", "Licht", "Female","German", 16, 26)""")
+cur.execute("""INSERT INTO Professor VALUES (8,"Sofia", "Aktanov", "Female","French", 17, 27)""")
+cur.execute("""INSERT INTO Professor VALUES (9,"Maria", "Klesch", "Female","German", 18, 28)""")
+cur.execute("""INSERT INTO Professor VALUES (10,"Mary", "Pears", "Female","German", 19, 29)""")
+
+for row in cur.execute('SELECT * FROM Professor'):
+    print(row)
+    print(row[2])
+print()
+db.commit()
+db.close()

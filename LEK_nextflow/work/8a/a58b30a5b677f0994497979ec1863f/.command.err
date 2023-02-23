@@ -1,0 +1,4 @@
+WARNING: Skipping mount /usr/local/var/singularity/mnt/session/etc/resolv.conf [files]: /etc/resolv.conf doesn't exist in container
+
+ERROR: Parameter "-outtrimal.fasta" not valid.
+

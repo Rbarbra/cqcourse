@@ -1,0 +1,60 @@
+Feb-23 20:55:38.119 [main] DEBUG nextflow.cli.Launcher - $> nextflow run LEK_mafft.nf -profile singularity
+Feb-23 20:55:38.724 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Feb-23 20:55:38.848 [main] INFO  nextflow.cli.CmdRun - Launching `LEK_mafft.nf` [nice_williams] - revision: 6a174f2b6b
+Feb-23 20:55:39.041 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/cq/LEK_nextflow/nextflow.config
+Feb-23 20:55:39.044 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/cq/LEK_nextflow/nextflow.config
+Feb-23 20:55:39.203 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `singularity`
+Feb-23 20:55:44.052 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [singularity]
+Feb-23 20:55:44.160 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/cq/.nextflow/plugins
+Feb-23 20:55:44.167 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-23 20:55:44.206 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-23 20:55:44.211 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-23 20:55:44.224 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-23 20:55:44.318 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-23 20:55:44.558 [main] DEBUG nextflow.Session - Session uuid: 45156838-27d3-42db-acc6-406db7fd4658
+Feb-23 20:55:44.559 [main] DEBUG nextflow.Session - Run name: nice_williams
+Feb-23 20:55:44.561 [main] DEBUG nextflow.Session - Executor pool size: 4
+Feb-23 20:55:44.737 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (17:55 CEST)
+  System: Linux 5.15.0-58-generic
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.17+8-post-Ubuntu-1ubuntu220.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 113725@bioinfobox [127.0.1.1]
+  CPUs: 4 - Mem: 4.9 GB (225.6 MB) - Swap: 923.3 MB (797.6 MB)
+Feb-23 20:55:44.843 [main] DEBUG nextflow.Session - Work-dir: /home/cq/LEK_nextflow/work [ext2/ext3]
+Feb-23 20:55:44.843 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/cq/LEK_nextflow/bin
+Feb-23 20:55:44.876 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-23 20:55:44.926 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-23 20:55:45.478 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-23 20:55:45.997 [main] DEBUG nextflow.Session - Session start invoked
+Feb-23 20:55:49.123 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-23 20:55:49.520 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-23 20:55:49.522 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-23 20:55:49.542 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-23 20:55:49.562 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=4.9 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Feb-23 20:55:49.675 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-23 20:55:50.190 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-23 20:55:50.191 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-23 20:55:50.214 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-23 20:55:50.214 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-23 20:55:50.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-23 20:55:50.234 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-23 20:55:50.250 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: trimal, mafft, downloadFiles, combineFastaFiles
+Feb-23 20:55:50.253 [main] DEBUG nextflow.Session - Ignite dataflow network (4)
+Feb-23 20:55:50.260 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > downloadFiles
+Feb-23 20:55:50.266 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combineFastaFiles
+Feb-23 20:55:50.269 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mafft
+Feb-23 20:55:50.271 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > trimal
+Feb-23 20:55:50.273 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-23 20:55:50.273 [main] DEBUG nextflow.Session - Session await
+Feb-23 20:55:50.760 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > downloadFiles
+Feb-23 20:55:51.030 [Actor Thread 6] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=12; maxQueueSize=36; keepAlive=1m
+Feb-23 20:55:51.080 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > combineFastaFiles
+Feb-23 20:55:51.178 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > mafft
+Feb-23 20:55:51.207 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [skipping] Stored process > trimal
+Feb-23 20:55:51.216 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-23 20:55:51.318 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-23 20:55:51.398 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Feb-23 20:55:51.569 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Feb-23 20:55:51.648 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

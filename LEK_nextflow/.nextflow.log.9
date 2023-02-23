@@ -1,0 +1,56 @@
+Feb-22 19:19:23.133 [main] DEBUG nextflow.cli.Launcher - $> nextflow run LEK_mafft.nf
+Feb-22 19:19:23.556 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.6
+Feb-22 19:19:23.724 [main] INFO  nextflow.cli.CmdRun - Launching `LEK_mafft.nf` [pensive_darwin] - revision: 1e94550434
+Feb-22 19:19:23.804 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/cq/LEK_nextflow/nextflow.config
+Feb-22 19:19:23.828 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/cq/LEK_nextflow/nextflow.config
+Feb-22 19:19:23.926 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-22 19:19:27.520 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/cq/.nextflow/plugins
+Feb-22 19:19:27.525 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-22 19:19:27.631 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-22 19:19:27.635 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-22 19:19:27.654 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-22 19:19:27.798 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-22 19:19:28.020 [main] DEBUG nextflow.Session - Session uuid: 12533002-83c3-4f70-9b8c-a972e1eba955
+Feb-22 19:19:28.021 [main] DEBUG nextflow.Session - Run name: pensive_darwin
+Feb-22 19:19:28.023 [main] DEBUG nextflow.Session - Executor pool size: 4
+Feb-22 19:19:28.185 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.6 build 5660
+  Created: 21-12-2021 16:55 UTC (17:55 CEST)
+  System: Linux 5.15.0-58-generic
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 11.0.17+8-post-Ubuntu-1ubuntu220.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 109650@bioinfobox [127.0.1.1]
+  CPUs: 4 - Mem: 4.9 GB (181 MB) - Swap: 923.3 MB (812.2 MB)
+Feb-22 19:19:28.300 [main] DEBUG nextflow.Session - Work-dir: /home/cq/LEK_nextflow/work [ext2/ext3]
+Feb-22 19:19:28.301 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/cq/LEK_nextflow/bin
+Feb-22 19:19:28.330 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-22 19:19:28.404 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-22 19:19:28.554 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-22 19:19:28.954 [main] DEBUG nextflow.Session - Session start invoked
+Feb-22 19:19:31.440 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-22 19:19:31.970 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:19:31.971 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:19:31.991 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-22 19:19:32.029 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=4.9 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Feb-22 19:19:32.172 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Feb-22 19:19:32.600 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:19:32.601 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:19:32.621 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: downloadFiles, combineFastaFiles
+Feb-22 19:19:32.622 [main] DEBUG nextflow.Session - Ignite dataflow network (2)
+Feb-22 19:19:32.623 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > downloadFiles
+Feb-22 19:19:32.626 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > combineFastaFiles
+Feb-22 19:19:32.639 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-22 19:19:32.640 [main] DEBUG nextflow.Session - Session await
+Feb-22 19:19:33.545 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:19:33.572 [Task submitter] INFO  nextflow.Session - [7c/c9b6fe] Submitted process > downloadFiles
+Feb-22 19:19:35.270 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: downloadFiles; status: COMPLETED; exit: 0; error: -; workDir: /home/cq/LEK_nextflow/work/7c/c9b6fe37cc04e6ae7b83b53c0a81c5]
+Feb-22 19:19:35.450 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=12; maxQueueSize=36; keepAlive=1m
+Feb-22 19:19:35.480 [Actor Thread 8] DEBUG nextflow.processor.TaskProcessor - Process `combineFastaFiles` is unable to find [UnixPath]: `/home/cq/LEK_nextflow/cache/combined.fasta` (pattern: `combined.fasta`)
+Feb-22 19:19:35.553 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:19:35.555 [Task submitter] INFO  nextflow.Session - [2e/ddfcc6] Submitted process > combineFastaFiles
+Feb-22 19:19:35.864 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: combineFastaFiles; status: COMPLETED; exit: 0; error: -; workDir: /home/cq/LEK_nextflow/work/2e/ddfcc6e1a49a86d26794902564428c]
+Feb-22 19:19:35.985 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-22 19:19:36.105 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-22 19:19:36.138 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1.8s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Feb-22 19:19:36.307 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Feb-22 19:19:36.328 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

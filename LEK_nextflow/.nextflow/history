@@ -1,0 +1,9 @@
+2023-02-22 19:17:53	-	silly_turing	-	9bc02128bc8e65a01381b17c4a918bfe	a2f11513-fe02-4b53-8f5a-920f4312bae9	nextflow run LEK_mafft.nf --profile singularity
+2023-02-22 19:18:30	-	voluminous_wescoff	-	9bc02128bc8e65a01381b17c4a918bfe	1a43eda7-d531-4624-9ee5-44b20ec0da61	nextflow run LEK_mafft.nf
+2023-02-22 19:19:28	8.3s	pensive_darwin	OK	1e94550434aa9799d1ed2bdb749fc7a9	12533002-83c3-4f70-9b8c-a972e1eba955	nextflow run LEK_mafft.nf
+2023-02-22 20:32:12	11.2s	nice_heyrovsky	OK	461ed7ce6d5fcc7eb9f37f601ffbfb64	54fe2a1a-abe6-4676-b8d9-60e11075770d	nextflow run LEK_mafft.nf -profile singularity
+2023-02-22 21:09:33	15.9s	modest_mccarthy	ERR	7caa7a003bb8120e414897912c5b6730	4615a296-fbd8-415a-878b-17edd9eb85f7	nextflow run LEK_mafft.nf -profile singularity
+2023-02-22 21:18:07	12.8s	deadly_easley	ERR	10400157beaa5a1c783a8a3cb2813293	069001d6-881d-4f2d-8d5d-d6f64814d8fb	nextflow run LEK_mafft.nf -profile singularity
+2023-02-22 21:55:01	14.4s	lonely_carson	OK	6a174f2b6b8f97a828c3c2e9eda83632	d6c2b98b-c9aa-4034-ad73-9261087c6523	nextflow run LEK_mafft.nf -profile singularity
+2023-02-23 20:55:44	7.6s	nice_williams	OK	6a174f2b6b8f97a828c3c2e9eda83632	45156838-27d3-42db-acc6-406db7fd4658	nextflow run LEK_mafft.nf -profile singularity
+2023-02-23 20:57:53	6.7s	berserk_pesquet	OK	ddf6567014f0d22eca7a04437e77b0e1	cb72fc73-4c7c-4549-b915-872faf6e6a2d	nextflow run LEK_mafft.nf -profile singularity
